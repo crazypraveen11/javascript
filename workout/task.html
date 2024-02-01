@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>task website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    <!-- bootstrap icon cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <style>
+        #Update {
+            display: none;
+        }
+        h2{
+            font-style: sans-serif;
+            color: rgb(44, 118, 147);
+        }
+        span{
+            color: rgb(241, 10, 10);
+        }
+        hr{
+            color: rgb(39, 36, 36);
+        }
+        select{
+            color: rgb(27, 88, 112);
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+      <div>
+        <h2 class=" ms-3 mt-2">Individual Registration</h2>
+      </div>
+      <hr>
+      <div>
+        <p>
+            GARBAGE/JUNK VALUES IN PROFILE MAY LEAD TO DEACTIVATION<br>
+            Please use a valid E-mail ID and mobile number in registration.
+        </p>
+        <hr>
+      </div>
+      <div class="row col-8">
+        <div class="col-6"> 
+            <label class="form-label">Username <span>*</span> :</label>
+            <input type="text" id="username" class="p-1" placeholder=" Username"><br>
+            <span id="username1"></span>
+        </div>
+        <div class="col-4"> 
+            <label>Password <span>*</span> :</label>
+            <input type="password" id="password" class="p-1" placeholder=" Password"><br>
+            <span id="password1"></span>
+        </div>
+      </div>
+      <hr>
+      <div>
+        <label>Confirm Password <span>*</span> :</label>
+        <input type="password" id="confirm" class="p-1" placeholder="Confirm Password"><br>
+        <span id="confirm1"></span>
+      </div><br>
+      <hr>
+      <div class="row col-8">
+        <div class="col-6"> 
+            <label>Security Question <span>*</span> :</label>
+            <select class="p-1" id="question">
+                <option value="choose" selected>Choose Question</option>
+                <option value="Your pass">Your Pass</option>
+                <option value="Your date">Your date</option>
+                <option value="Mark">Mark</option>
+                <option value="Date of Birth">Date of Birth</option>
+            </select><br>
+            <span id="question1"></span>
+        </div>
+        <div class="col-5"> 
+            <label>Security Answer <span>*</span> :</label>
+            <input type="text" id="answer" class="p-1" placeholder=" Security Answer"><br>
+            <span id="answer1"></span>
+        </div>
+      </div><br>
+      <hr>
+      <div>
+        <label>Preferred Language <span>*</span> :</label>
+            <select class="p-1" id="language">
+                <option selected hidden value="chooselanguage">Choose language</option>
+                <option value="English" >English</option>
+                <option value="Tamil">Tamil</option>
+                <option value="Telugu">Telugu</option>
+                <option value="Kannadam">Kannadam</option>
+                <option value="Hindi">Hindi</option>
+                <option value="Urdu">Urdu</option>
+                <option value="Malayalam">Malayalam</option>
+            </select><br>
+            <span id="language1"></span>
+      </div>
+      <hr>
+      <div>
+        <h3 class="ms-5"><ins><span>Personal Details</span></ins></h3>
+      </div>
+      <hr>
+      <div>
+        <label class="ms-2">Name <span>*</span> :</label><br>
+        <input type="text" id="name" class="p-1 ms-4" placeholder="Enter your name"><br>
+        <span id="name1"></span>
+      </div><br>
+        <label class="ms-2">Email <span>*</span> :</label>
+        <div class="input-group">
+             <span class="input-group-text ms-4">@</span>
+            <input type="text" id="email" class="p-1 " placeholder="Enter your email"><br>
+            <span id="email1"></span>
+        </div>
+        <br>
+      <div>
+        <label class="ms-2">PAN Number <span>*</span> :</label><br>
+        <input type="text" id="pannumber" class="p-1 ms-4" placeholder=" Enter your PAN number"><br>
+        <span id="pan1"></span>
+      </div><br>
+      <div>
+        <label class="ms-2">Address <span>*</span> :</label><br>
+        <input type="text" id="address" class="p-1 ms-4" placeholder="Enter your address"><br>
+        <span id="address1"></span>
+      </div>
+      <br>
+      <div class="p-2 ms-5">
+        <div class=" btn btn-success col-4" id="Submit" onclick='addData()'>Add</div>
+        <div class=" btn btn-primary col-4" id="Update">Update</div>
+      </div>
+
+
+      <div class="row justify-content-center mt-2">
+        <div class="table-bordered col-lg-12 ">
+            <table class="table table-bordered table-primary table-striped" id="crudTable">
+                <thead>
+                    <tr class="text-center">
+                        <th>Username</th>
+                        <th>Password</th>
+                        <th>Confirm Password</th>
+                        <th>Security Question</th>
+                        <th>Security Answer</th>
+                        <th>Preferred Language</th>
+                        <th>Name</th>
+                        <th>Email</th>
+                        <th>PAN number</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="tasklocalstorage.js"></script>
+</body>
+</html>

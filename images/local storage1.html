@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>local</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"
+    integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p"
+    crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js"
+    integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF"
+    crossorigin="anonymous"></script>
+    <style>
+        #Update {
+            display: none;
+        }
+        body{
+            background-color: cadetblue;
+        }
+    </style>
+</head>
+<body > 
+    <div class="row justify-content-center ">
+        <div class="form col-lg-5 col-sm-7 col-md-10 mt-3">
+            <h1 class="text-center fst-italic"><ins><b><span class="text-dark">FORM</span></b></ins></h1>
+            <div class="form-group mt-3">
+               <label class="form-label" >Name :</label>
+               <input type="text" id="name" class="form-control" placeholder="Enter your Name">
+               <span id="name1"></span>
+            </div>
+            <div class="form-group mt-3">
+                <label class="form-label" >Age :</label>
+                <input type="number" id="age" class="form-control" placeholder="Enter your age">
+                <span id="age1"></span>
+             </div>
+             <div class="form-group mt-3">
+                <label class="form-label" >Address :</label>
+                <input type="text" id="address" class="form-control" placeholder="Enter your Address">
+                <span id="address1"></span>
+             </div>
+             <div class="text-center mt-4">
+                  <div class=" btn btn-success col-4" id="Submit" onclick='addData()'>Add Data</div>
+                  <div class=" btn btn-primary col-4" id="Update">Update</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row justify-content-center mt-4">
+        <div class="table-bordered col-lg-6 ">
+            <table class="table table-bordered table-striped" id="crudTable">
+                <thead>
+                    <tr class="text-center">
+                        <th>Name</th>
+                        <th>Age</th>
+                        <th>Address</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody class="text-center">
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <script src="local storage1.js"></script>
+    
+</body>
+</html>

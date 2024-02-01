@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>validate</title>
+</head>
+<body>
+    <script>
+        function get(){
+            let studentname = document.forms['validate'].aadhaar.value;
+            alert((/^[0-9]{1,4}\s[0-9]{1,4}\s[0-9]{1,4}$/).test(studentname))
+        }
+    </script>
+
+    <form name="validate">
+        <input type="text" name="aadhaar" placeholder="Enter your Aadhaar no">
+        <button onclick="get()">Submit</button>
+    </form>
+</body>
+</html>

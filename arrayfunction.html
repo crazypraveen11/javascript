@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Function</title>
+</head>
+<body>
+    <script>
+
+        let fruitsname=new Array();
+
+        // PUSH ---> Add a element in last index
+        fruitsname.push('Apple');
+        fruitsname.push('Orange')
+        fruitsname.push('Strawberry')
+        fruitsname.push('Mango')
+        fruitsname.push('Banana')
+        fruitsname.push('Gooseberry')
+        fruitsname.push('Lemon')
+
+        // pop ----> delete the last index 
+        fruitsname.pop()
+
+        // unshift --> add element in first index
+        fruitsname.unshift('Grapes')
+        fruitsname.unshift('Goose')
+
+        // shift ---> delete element in first index
+        fruitsname.shift()
+
+        // Length
+        //   alert(fruitsname.length)
+        
+        // SORT
+        fruitsname.sort();
+
+        // Reverse
+        fruitsname.reverse();
+
+        //  document.write(fruitsname);
+
+
+        
+        // map ----> one by one get values
+
+        fruitsname.map(get);
+
+        function get(value)
+        {
+        //   document.write(value);
+             document.write("<b>"+value+"</b>"+ "<br>"); 
+
+        }
+
+        // At (postion)
+        alert(fruitsname.at(5));
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>INNERHTML</title>
+</head>
+<body>
+        <p> <h1 > INNERHTML</h1>
+
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Unde et, facere ipsam ad, repudiandae obcaecati veniam harum delectus soluta suscipit ex! Et blanditiis quisquam aperiam magni molestiae illum labore cum iusto doloribus nihil mollitia ipsum nemo esse ut sunt dolore eos odio impedit distinctio accusamus dolorum minus, exercitationem delectus nesciunt. Asperiores vel quo neque incidunt sint? Sapiente recusandae minus nisi necessitatibus blanditiis quae nam molestiae quaerat. Repellat molestias reprehenderit ipsum ut ducimus temporibus voluptas ipsam a maiores sapiente asperiores quod nemo in quisquam ullam necessitatibus, repellendus labore velit. Deserunt aliquid a cupiditate id expedita nam inventore at! Repellat, ut at.
+            <span id="demodate"> CURRENT DATE</span>
+        </p>
+        <h1>THANK YOU</h1>
+        <script>
+            document.getElementById('demodate').innerHTML=Date();   
+            let headline="IMPORTANT FUNCTION (innerhtml)";
+
+            function change()
+            {
+                document.getElementsByTagName('h1')[0].innerHTML=headline;
+                
+                let cssstyle=document.getElementsByTagName('h1')[0];
+                cssstyle.style.backgroundColor='yellow';
+                cssstyle.style.textAlign='center';
+                cssstyle.style.textShadow='0px 0px 10px red'
+            }
+        </script>
+        <button onclick="change()">CLICK ME...!</button>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fan</title>
+</head>
+<body>
+      <h2 style="text-align: center;"> FAN </h2>
+      <div id="fan-container" style="text-align: center;">
+          <img src="/images/fan stop.png" id="myfan" width="400px" height="400px" onclick="check()">
+     </div>
+     <script>
+        let geton = false;
+        function check(){
+               let fangif = document.getElementById('myfan');
+
+               if (geton) {
+                fangif.src = "/images/fan stop.png";
+               }
+               else{
+                fangif.src ="/images/fan-gif-1-white-background-ceiling-fan-acegif.gif";
+               }
+
+               geton = !geton;
+        }
+     </script>
+</body>
+</html>

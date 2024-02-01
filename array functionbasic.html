@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Function</title>
+</head>
+<body>
+        <script>
+            // Array Creation
+            // let fruitsname = ["Apple","Banana","mango","Strawberry","Gooseberry"];
+            //or
+            let carbrands=new Array() ;
+
+            // PUSH -ADD A ELEMENT IN LAST INDEX
+            carbrands.push("BMW");
+            carbrands.push("AUDI");
+            carbrands.push("BENTELY");
+            carbrands.push("SUZUKI");
+            carbrands.push("FERRARI");
+            
+            // UNSHITFT -ADD A ELEMENT IN FIRST INDEX
+            carbrands.unshift("TATA");
+
+            // POP- DELETE A ELEMENT IN LAST INDEX
+            // carbrands.pop();
+
+            // SHIFT -DELETE A ELEMENT IN FIRST INDEX
+            // carbrands.shift();
+
+            // carbrands.delete([5]);
+
+            // document.write(carbrands+"<br/>");
+            
+
+            // SORT
+            carbrands.sort();
+
+            // REVERSE
+            carbrands.reverse();
+            
+            // AT(position) 
+            // alert(carbrands.at(5));
+
+            // LENGTH
+            alert(carbrands.length);
+
+            // MAP- ONE BY ONE GET  YOUR VALUES
+            carbrands.map(getting);
+            function getting(temp)
+            {
+                document.write("<b>"+temp+"</b>"+ "<br>");
+            }
+
+            // looping
+            // for(let a=0;a<carbrands.length;a++)
+            // {
+            //     document.write("<b>"+carbrands[a]+"</b>"+ "<br>");
+            // }
+
+                // SLICE 
+                // The slice() method creates a new array.
+                // The slice() method does not remove any elements from the source array.
+                //  The slice() method can take two arguments like slice(1, 3).
+                //  The method then selects elements from the start argument, and up to (but not including) the end argument.
+                // let copycarbrands=  carbrands.slice(2);// delete first two element
+                // let copycarbrands=carbrands.slice(2,4)
+                //  document.write(copycarbrands);
+
+                // alert(carbrands);
+                // let copycarbrands = carbrands.slice(1, 4);
+
+                // alert(copycarbrands);
+
+                // SPLICE-
+                // add new items in array
+                // syntex:    
+                // The first parameter (2) defines the position where new elements should be added (spliced in).
+                // The second parameter (0) defines how many elements should be removed.
+                // The rest of the parameters ("Lemon" , "Kiwi") define the new elements to be added.
+                carbrands.splice(2, 2, "indigo","Violet");
+
+                // With clever parameter setting, you can use splice() to remove elements without leaving "holes" in the array:
+                //The first parameter (0) defines the position where new elements should be added (spliced in).
+                //The second parameter (1) defines how many elements should be removed.
+                // carbrands.splice(2,1)    
+
+
+
+        </script>
+</body>
+</html>

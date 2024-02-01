@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map</title>
+</head>
+<body>
+    <script>
+
+        //            0       1       2      3
+        let array=["Blue","Yellow","White","Red"];
+
+        array.splice(2,0,"Indigo","Violet");
+
+
+
+        array.map ( (get) => 
+
+        {
+            document.write(get +"<br>");
+        }
+        )
+
+    </script>
+</body>
+</html>

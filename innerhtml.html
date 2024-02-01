@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>innerhtml</title>
+</head>
+<body>
+      <h1> HTML </h1>
+      <p>
+        DATE AND TIME
+        <span id="demodate"> Current Date</span>
+        </p>
+    <script>
+            document.getElementById('demodate').innerHTML=Date()
+            
+           let headline="HyperText Markup Language";
+
+        function inner()
+        {
+            document.getElementsByTagName('h1')[0].innerHTML= headline;
+
+
+            let css=document.getElementsByTagName('h1')[0];
+
+            css.style.backgroundColor="red";
+            css.style.textAlign="center";
+            css.style.textShadow='0px 1px 5px blue';
+
+        }
+
+    </script>
+
+    <button onclick="inner()"> Click Me </button>
+</body>
+</html>
