@@ -94,7 +94,7 @@ function check(){
         document.getElementById("pan1").innerHTML = "Your PAN number cannot be empty"
         return false;
     }
-    else if ((/^[0-9 A-Z]{10,10}$/).test(pannumber)) {
+    else if (!(/^[0-9 A-Z]{10,10}$/).test(pannumber)) {
         document.getElementById("pan1").innerHTML = "Your PAN should be in under condition"
         return false;
     }
@@ -262,6 +262,9 @@ let updateData = (pos) => {
         
 
         localStorage.setItem("peopleList", JSON.stringify(userList));
+        document.getElementById("Submit").style.display = 'block';
+        document.getElementById("Update").style.display = 'none';
+        
         showData();
         document.getElementById("username").value = "";
         document.getElementById("password").value = "";
